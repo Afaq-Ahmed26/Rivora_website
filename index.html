@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Rivora — Women's health & cycle tracking for South Asia. Understand your body, your cycle, and your health. PCOS, PCOD, irregular cycles — all supported.">
+    content="Rivora — Women's health & cycle tracking built for Pakistan & India. Understand your body, your cycle, and your health. PCOS, PCOD, irregular cycles — all supported.">
   <meta property="og:title" content="Rivora — Know Your Body.">
   <meta property="og:description"
-    content="The women's health companion built for South Asia. Track your cycle, understand your health, share with your partner on your terms.">
+    content="The women's health companion built for Pakistan & India. Track your cycle, understand your health, share with your partner on your terms.">
   <meta name="theme-color" content="#c45e6a">
   <title>Rivora — Know Your Body.</title>
 
@@ -391,9 +391,108 @@
       }
     }
 
-    /* ══════════════════════════════════════════
-       HERO — warm, health-first
-    ══════════════════════════════════════════ */
+    /* ── Hamburger mobile menu ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border: none;
+      background: none;
+      border-radius: var(--r-sm);
+      transition: background 0.2s;
+    }
+
+    .hamburger:hover {
+      background: var(--border-light);
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-on-light);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: rgba(250, 247, 244, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 20px clamp(20px, 5vw, 80px) 28px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-on-light-2);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-light);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--brand-primary);
+    }
+
+    .mobile-menu .mobile-waitlist {
+      margin-top: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: white;
+      background: var(--brand-primary);
+      border-radius: var(--r-full);
+      padding: 14px 32px;
+      border-bottom: none;
+    }
+
+    .mobile-menu .mobile-waitlist:hover {
+      background: var(--brand-primary-dark);
+      color: white;
+    }
+
+    @media (max-width: 640px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
     #hero {
       min-height: 100vh;
       display: flex;
@@ -600,7 +699,7 @@
     }
 
     .mockup-phase-badge {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -611,7 +710,7 @@
     }
 
     .mockup-day {
-      font-size: 12px;
+      font-size: 13px;
       color: var(--text-on-light-3);
       font-weight: 500;
     }
@@ -675,7 +774,7 @@
     }
 
     .tip-label {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -952,7 +1051,7 @@
     }
 
     .phase-number {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -993,6 +1092,29 @@
     }
 
     .nutrition-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      margin-bottom: 4px;
+    }
+
+    .nutrition-text {
+      font-size: 12px;
+      color: var(--text-on-light-2);
+      line-height: 1.5;
+    }
+
+    .phase-care {
+      background: rgba(74, 124, 106, 0.08);
+      border: 1px solid rgba(74, 124, 106, 0.15);
+      border-radius: var(--r-sm);
+      padding: 10px 14px;
+      margin-bottom: var(--s2);
+    }
+
+    .phase-care {
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -1468,7 +1590,7 @@
     }
 
     .disclaimer {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--text-on-dark-3);
       max-width: 520px;
       line-height: 1.6;
@@ -1626,11 +1748,6 @@
       }
     }
 
-    @media (max-width: 540px) {
-      .pcos-condition-grid {
-        grid-template-columns: 1fr !important;
-      }
-    }
 
     @media (min-width: 481px) and (max-width: 768px) {
       .why-grid {
@@ -1669,8 +1786,22 @@
           Join Waitlist
         </a>
       </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="#health" class="mobile-nav-link">For Her</a>
+    <a href="#the-cycle" class="mobile-nav-link">The Cycle</a>
+    <a href="#dual-value" class="mobile-nav-link">For Him</a>
+    <a href="#features" class="mobile-nav-link">Features</a>
+    <a href="#free-trial" class="mobile-nav-link">Free Trial</a>
+    <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8" target="_blank" rel="noopener" class="mobile-waitlist">Join Waitlist
+      →</a>
+  </div>
 
   <!-- HERO -->
   <section id="hero" aria-label="Rivora — Women's health companion">
@@ -1692,9 +1823,8 @@
         </h1>
 
         <p class="hero-sub reveal stagger-3">
-          Rivora tracks your unique cycle — whether it's 21 days or 40 —
-          gives you phase-specific health guidance, and helps your partner
-          understand you. Finally.
+          Rivora tracks your unique cycle whether it's 21 days or 40
+          gives you phase-specific health guidance, and helps you and those close to you finally understand your body.
         </p>
 
         <div class="hero-cta-row reveal stagger-4">
@@ -1708,7 +1838,7 @@
           </a>
           <a href="#health" class="btn-ghost">See how it works</a>
         </div>
-        <p class="hero-note reveal stagger-5">Free to join · No spam · Unsubscribe anytime</p>
+        <p class="hero-note reveal stagger-5">Free to join · Unsubscribe anytime</p>
       </div>
 
       <div class="hero-right reveal-fade stagger-3" aria-hidden="true">
@@ -1719,7 +1849,7 @@
               <span class="mockup-phase-badge">Growing Energy</span>
               <span class="mockup-day">Day 9</span>
             </div>
-            <div class="mockup-big-label">Follicular Phase</div>
+            <div class="mockup-big-label">Growing Energy</div>
             <div class="mockup-sublabel">Your energy is rising 🌱</div>
 
             <div class="mockup-metric">
@@ -1746,7 +1876,7 @@
 
             <div class="mockup-tip">
               <div class="tip-label">Today's Health Tip</div>
-              <div class="tip-text">Boost iron: daal, kaleji, chana. Your body absorbs it best this week. 🌿</div>
+              <div class="tip-text">Boost iron: daal, chana. Your body absorbs it best this week. 🌿</div>
             </div>
           </div>
 
@@ -1787,76 +1917,108 @@
       </div>
 
       <!-- PCOD / PCOS / PMOS — featured card -->
-      <div class="health-card health-card-featured reveal-up stagger-1" style="--card-accent: var(--brand-primary)">
-        <div class="health-card-icon">🩺</div>
-        <h3>PCOD, &amp; PCOS/PMOS Support</h3>
-        <p>
-          Irregular cycles, skipped months, unpredictable patterns —
-          Rivora is built for you. No fake 28-day assumptions.
-          Just honest tracking that adapts to your body, whatever
-          name your doctor has given it.
-        </p>
-        <div class="pcos-pills">
-          <span class="pcos-pill">Irregular cycle mode</span>
-          <span class="pcos-pill">21–40+ day support</span>
-          <span class="pcos-pill">Pattern detection</span>
-          <span class="pcos-pill">Doctor-visit export</span>
-          <span class="pcos-pill">No false precision</span>
-          <span class="pcos-pill">PCOD &amp; PMOS aware</span>
+      <div class="health-grid">
+        <div class="health-card health-card-featured reveal-up stagger-1" style="--card-accent: var(--brand-primary)">
+          <div class="health-card-icon">🩺</div>
+          <h3>PCOD, &amp; PCOS/PMOS Support</h3>
+          <p>
+            Irregular cycles, skipped months, unpredictable patterns
+            Rivora is built for you. No fake 28 day assumptions.
+            Just honest tracking that adapts to your body, whatever
+            name your doctor has given it.
+          </p>
+          <div class="pcos-pills">
+            <span class="pcos-pill">Irregular cycle mode</span>
+            <span class="pcos-pill">21–40+ day support</span>
+            <span class="pcos-pill">Pattern detection</span>
+            <span class="pcos-pill">Doctor visit export</span>
+            <span class="pcos-pill">No false precision</span>
+            <span class="pcos-pill">PCOD &amp; PMOS aware</span>
+          </div>
+        </div>
+
+        <div class="health-card reveal-up stagger-2" style="--card-accent: var(--brand-gold)">
+          <div class="health-card-icon">🥗</div>
+          <h3>Phase Smart Nutrition</h3>
+          <p>
+            Iron in Week 1. Magnesium in Week 4.
+            Every phase depletes different nutrients. Rivora tells you
+            what your body needs and what foods deliver it.
+          </p>
+        </div>
+
+        <div class="health-card reveal-up stagger-3" style="--card-accent: var(--brand-accent)">
+          <div class="health-card-icon">💊</div>
+          <h3>Nutrient Deficiency Detection</h3>
+          <p>
+            Log your symptoms and mood. Rivora spots patterns linked
+            to iron, B12, calcium, magnesium, and vitamin D deficiencies
+            and suggests what to eat or supplement.
+          </p>
+        </div>
+
+        <div class="health-card reveal-up stagger-4" style="--card-accent: var(--phase-reflect)">
+          <div class="health-card-icon">💧</div>
+          <h3>Hydration & Energy</h3>
+          <p>
+            Your hydration needs shift across phases. Rivora adjusts
+            your daily target and reminds you at the right time
+            not just a flat 8-glasses rule.
+          </p>
+        </div>
+
+        <div class="health-card reveal-up stagger-5" style="--card-accent: var(--phase-peak)">
+          <div class="health-card-icon">📋</div>
+          <h3>Symptom Logging</h3>
+          <p>
+            Track cramps, acne, bloating, headaches, and mood shifts.
+            After 3–6 months, export a structured health report to
+            share with your doctor.
+          </p>
+        </div>
+
+        <div class="health-card reveal-up stagger-6" style="--card-accent: var(--brand-primary)">
+          <div class="health-card-icon">🔒</div>
+          <h3>Privacy by Default</h3>
+          <p>
+            App lock, biometric PIN, and hidden notification text.
+            On shared devices, your health data stays yours.
+            Built for Pakistani and Indian households from day one.
+          </p>
+        </div>
+
+        <div class="health-card reveal-up stagger-1" style="--card-accent: var(--brand-gold)">
+          <div class="health-card-icon">✨</div>
+          <h3>Skin, Hair & Body Effects</h3>
+          <p>
+            Acne before your period. Hair fall mid cycle. Bloating in the luteal phase.
+            Rivora maps your hormonal patterns to visible body changes so you stop
+            guessing why your skin or hair suddenly changed, and start understanding the reason.
+          </p>
+          <div class="pcos-pills" style="margin-top:16px;">
+            <span class="pcos-pill">Hormonal acne tracking</span>
+            <span class="pcos-pill">Hair fall patterns</span>
+            <span class="pcos-pill">Skin glow phases</span>
+            <span class="pcos-pill">Bloating & weight changes</span>
+          </div>
+        </div>
+
+        <div class="health-card reveal-up stagger-2" style="--card-accent: var(--brand-accent)">
+          <div class="health-card-icon">🦋</div>
+          <h3>Thyroid & Delayed Cycles</h3>
+          <p>
+            Hypothyroidism, long gaps between periods, unexpected weight changes
+            Rivora gives you guidance on managing these alongside your cycle, and
+            gently nudges you toward a doctor when patterns suggest you should go.
+            Not a diagnosis. Just the support no app has given you yet.
+          </p>
+          <div class="pcos-pills" style="margin-top:16px;">
+            <span class="pcos-pill">Delayed period support</span>
+            <span class="pcos-pill">Weight management tips</span>
+            <span class="pcos-pill">Doctor visit nudges</span>
+          </div>
         </div>
       </div>
-
-      <div class="health-card reveal-up stagger-2" style="--card-accent: var(--brand-gold)">
-        <div class="health-card-icon">🥗</div>
-        <h3>Phase-Smart Nutrition</h3>
-        <p>
-          Iron in Week 1. Magnesium in Week 4.
-          Every phase depletes different nutrients. Rivora tells you
-          what your body needs — and what foods deliver it.
-        </p>
-      </div>
-
-      <div class="health-card reveal-up stagger-3" style="--card-accent: var(--brand-accent)">
-        <div class="health-card-icon">💊</div>
-        <h3>Nutrient Deficiency Detection</h3>
-        <p>
-          Log your symptoms and mood. Rivora spots patterns linked
-          to iron, B12, calcium, magnesium, and vitamin D deficiencies
-          — and suggests what to eat or supplement.
-        </p>
-      </div>
-
-      <div class="health-card reveal-up stagger-4" style="--card-accent: var(--phase-reflect)">
-        <div class="health-card-icon">💧</div>
-        <h3>Hydration & Energy</h3>
-        <p>
-          Your hydration needs shift across phases. Rivora adjusts
-          your daily target and reminds you at the right time —
-          not just a flat 8-glasses rule.
-        </p>
-      </div>
-
-      <div class="health-card reveal-up stagger-5" style="--card-accent: var(--phase-peak)">
-        <div class="health-card-icon">📋</div>
-        <h3>Symptom Logging</h3>
-        <p>
-          Track cramps, acne, bloating, headaches, and mood shifts.
-          After 3–6 months, export a structured health report to
-          share with your doctor.
-        </p>
-      </div>
-
-      <div class="health-card reveal-up stagger-6" style="--card-accent: var(--brand-primary)">
-        <div class="health-card-icon">🔒</div>
-        <h3>Privacy by Default</h3>
-        <p>
-          App lock, biometric PIN, and hidden notification text.
-          On shared devices, your health data stays yours.
-          Built for South Asian homes from day one.
-        </p>
-      </div>
-    </div>
-    </div>
   </section>
 
   <!-- YOUR CYCLE — not "28 days" -->
@@ -1870,12 +2032,12 @@
         </h2>
         <p class="lead reveal stagger-3" style="max-width:560px; margin:0 auto; margin-top:16px;">
           Every cycle is different. Yours might be 24 days or 36 days
-          — and every phase has distinct health, nutrition, and energy patterns
+          and every phase has distinct health, nutrition, and energy patterns
           that Rivora adapts to specifically for you.
         </p>
         <div class="cycle-length-callout reveal stagger-4" style="margin-top:24px;">
           <span class="range-tag">21 – 40+ days</span>
-          All cycle lengths supported · PMOS-aware · Irregular mode
+          All cycle lengths supported · PMOS aware · Irregular mode
         </div>
       </div>
 
@@ -1888,8 +2050,14 @@
             lower mood are natural here.</p>
           <div class="phase-nutrition">
             <div class="nutrition-label">Key Nutrition</div>
-            <div class="nutrition-text">Iron-rich: dal makhani, kaleji, chana · Warming: adrak chai, khichdi ·
-              Hydration: 2.5–3L · Comfort: halwa or kheer in moderation</div>
+            <div class="nutrition-text">Iron-rich foods: dal, chicken, chana · Warming foods: adrak chai, khichdi ·
+              Hydration: 2.5–3L water</div>
+          </div>
+          <div class="phase-care">
+            <div class="nutrition-label">Comfort & Relief</div>
+            <div class="nutrition-text">
+              Warm water bag (heating pad) for cramps · Rest · Light movement or stretching · Dark chocolate (small amount) for mood support · Halwa or kheer in moderation
+            </div>
           </div>
           <div class="phase-tags">
             <span class="phase-tag-item">Rest</span>
@@ -1906,8 +2074,9 @@
             best week for plans and fresh starts.</p>
           <div class="phase-nutrition">
             <div class="nutrition-label">Key Nutrition</div>
-            <div class="nutrition-text">Vitamin B: anda, dahi, brown rice · Zinc: kaddoo ke beej, matar · Lean protein:
-              chicken karahi, daal · Energy: whole wheat roti</div>
+            <div class="nutrition-text">Vitamin B: egg, dahi/yogurt, brown rice · Zinc: Pumkin seeds, green peas/matar ·
+              Lean protein:
+              chicken , karahi, daal · Energy: whole wheat  roti</div>
           </div>
           <div class="phase-tags">
             <span class="phase-tag-item">Adventurous</span>
@@ -1921,10 +2090,11 @@
           <h3>Peak Energy</h3>
           <div class="phase-range">Typically days 14–16 (varies)</div>
           <p class="phase-desc">Your highest confidence and natural charisma. You feel magnetic and alive. Make this
-            week count — your body is performing at its best.</p>
+            week count your body is performing at its best.</p>
           <div class="phase-nutrition">
             <div class="nutrition-label">Key Nutrition</div>
-            <div class="nutrition-text">Antioxidants: anar, amla, palak · Light meals: dahi raita, grilled chicken ·
+            <div class="nutrition-text">Antioxidants: anar/Pomegranate, guava, spinach/palak · Light meals: dahi raita,
+              grilled chicken ·
               Stay well hydrated: lassi (no sugar) or nimbu pani</div>
           </div>
           <div class="phase-tags">
@@ -1937,7 +2107,7 @@
         <div class="phase-card reveal-up stagger-4" style="--phase-color: var(--phase-reflect)">
           <div class="phase-number">Phase 4</div>
           <h3>Reflection Week</h3>
-          <div class="phase-range">Typically days 17–28+ (varies)</div>
+          <div class="phase-range">Typically days 17 onward (varies by your cycle)</div>
           <p class="phase-desc">Energy turns inward. You may feel more sensitive, emotional, or irritable — this is your
             luteal phase, and it's completely normal.</p>
           <div class="phase-nutrition">
@@ -1968,13 +2138,13 @@
           </h2>
           <p class="lead reveal stagger-3" style="margin-top:24px; max-width:480px;">
             Most women were never taught to read their own cycle.
-            The mood shifts, the energy drops, the cravings — they're
+            The mood shifts, the energy drops, the cravings they're
             predictable once you understand your phases.
           </p>
           <p class="lead reveal stagger-4" style="margin-top:16px; max-width:480px;">
             And most partners? They misread these signals as personal.
             It's not a relationship problem. It's a knowledge gap.
-            Rivora closes it — for both of you.
+            Rivora closes it for both of you.
           </p>
         </div>
 
@@ -2019,7 +2189,7 @@
 
       <div class="dual-cards">
         <div class="dual-card her-card reveal-up stagger-1">
-          <p class="dual-user-label her-label">For Her — Primary Experience</p>
+          <p class="dual-user-label her-label">For Her Primary Experience</p>
           <h3>Understand<br>your body.</h3>
           <ul class="dual-list">
             <li><span class="check-her">✓</span> Track your exact cycle length (21–40+ days)</li>
@@ -2033,7 +2203,7 @@
         </div>
 
         <div class="dual-card him-card reveal-up stagger-2">
-          <p class="dual-user-label him-label">For Him — Support Experience</p>
+          <p class="dual-user-label him-label">For Him Support Experience</p>
           <h3>Support her.<br>Stop guessing.</h3>
           <ul class="dual-list">
             <li><span class="check-him">✓</span> See her current phase (only what she allows)</li>
@@ -2055,7 +2225,7 @@
         <p class="section-label reveal">Everything Inside</p>
         <h2 class="display reveal stagger-2">
           Built for real life<br>
-          <em>in South Asia.</em>
+          <em>in Pakistan &amp; India.</em>
         </h2>
       </div>
 
@@ -2064,7 +2234,7 @@
           style="--icon-bg: rgba(196,94,106,0.08); --icon-border: rgba(196,94,106,0.15)">
           <div class="feature-icon">🔴</div>
           <h3>Your Cycle,<br>Your Length</h3>
-          <p>21 days or 40 days — Rivora adapts. Not a rigid 28-day assumption. Confidence indicators tell you when
+          <p>21 days or 40 days Rivora adapts. Not a rigid 28 day assumption. Confidence indicators tell you when
             predictions are solid vs. approximate.</p>
         </div>
 
@@ -2080,9 +2250,11 @@
           style="--icon-bg: rgba(201,151,74,0.08); --icon-border: rgba(201,151,74,0.15)">
           <div class="feature-icon">🧬</div>
           <h3>PMOS & Irregular<br>Cycle Support</h3>
-          <p>Ovulation signal logging, BBT pattern tracking, and honest range-based predictions instead of false
-            single-date precision. Fully updated for the new PMOS diagnosis framework. A nudge to consult a doctor when
-            patterns suggest it.</p>
+          <p>Ovulation signal logging, symptom-based cycle tracking, and range based predictions instead of exact dates. Designed for real world irregular cycles and natural variation.
+          </p>
+          <p>
+          A gentle reminder to consult a healthcare professional if irregular patterns persist or symptoms feel unusual.
+          </p>
         </div>
 
         <div class="feature-card reveal-up stagger-4"
@@ -2090,7 +2262,7 @@
           <div class="feature-icon">🔒</div>
           <h3>Privacy First,<br>Always</h3>
           <p>Biometric lock, PIN fallback, and notifications that show nothing sensitive on the lock screen. Built for
-            shared family phones in South Asian households.</p>
+            shared family phones across Pakistan &amp; India.</p>
         </div>
 
         <div class="feature-card reveal-up stagger-5"
@@ -2098,7 +2270,7 @@
           <div class="feature-icon">💑</div>
           <h3>Partner<br>Connection</h3>
           <p>Invite your partner with a secure, expiring link. Set exactly what he sees. Revoke access instantly. A
-            separate experience — not just a shared login.</p>
+            separate experience not just a shared login.</p>
         </div>
 
         <div class="feature-card reveal-up stagger-6"
@@ -2108,6 +2280,33 @@
           <p>After 3–6 months of logging, generate a clean summary of your cycle patterns, symptoms, and trends to share
             with your gynaecologist.</p>
         </div>
+
+        <div class="feature-card reveal-up stagger-1"
+          style="--icon-bg: rgba(201,151,74,0.08); --icon-border: rgba(201,151,74,0.15)">
+          <div class="feature-icon">✨</div>
+          <h3>Skin, Hair &<br>Body Tracking</h3>
+          <p>Hormonal acne, hair fall, bloating, and weight shifts all tied to your cycle phases. Rivora explains
+            what no app has bothered to connect before: why your skin or hair changes, and when.</p>
+        </div>
+
+        <div class="feature-card reveal-up stagger-2"
+          style="--icon-bg: rgba(74,124,106,0.08); --icon-border: rgba(74,124,106,0.15)">
+          <div class="feature-icon">🍛</div>
+          <h3>Desi Food<br>Nutrition Plans</h3>
+          <p>Iron from spinach/palak and chana. Magnesium from badam and methi. Every nutrition tip in Rivora is built around
+            real Pakistani and Indian foods not kale salads and smoothie bowls.</p>
+        </div>
+
+        <div class="feature-card reveal-up stagger-3"
+          style="--icon-bg: rgba(74,124,106,0.08); --icon-border: rgba(74,124,106,0.15)">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Health<br>Assistant <span
+              style="font-size:11px; font-weight:600; background:var(--brand-gold); color:white; border-radius:20px; padding:2px 8px; vertical-align:middle;">Coming
+              Soon</span></h3>
+          <p>Ask anything about PCOS, irregular cycles, or your symptoms. A private AI assistant that understands your
+            cycle history no judgment, no waiting room. Built specifically for Pakistani and Indian women's health
+            questions.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -2115,7 +2314,7 @@
   <!-- TRUST -->
   <section id="trust" aria-label="Why trust Rivora">
     <div class="container">
-      <p class="section-label reveal">Built for South Asia</p>
+      <p class="section-label reveal">Built for Pakistan &amp; India</p>
       <h2 class="display reveal stagger-2" style="max-width:640px; margin:0 auto;">
         Made here.<br>
         <em>For here.</em>
@@ -2123,7 +2322,7 @@
       <p class="lead reveal stagger-3" style="max-width:520px; margin:16px auto 0;">
         We understand shared devices, family privacy, and why health
         conversations are complicated here. Rivora was designed with all
-        of that — from day one.
+        of that from day one.
       </p>
 
       <div class="trust-pills">
@@ -2133,7 +2332,7 @@
         </div>
         <div class="trust-pill reveal stagger-2">
           <span class="pill-dot" style="--dot-color: var(--brand-gold)"></span>
-          Zero ads. Ever.
+          Zero ads
         </div>
         <div class="trust-pill reveal stagger-3">
           <span class="pill-dot" style="--dot-color: var(--brand-accent)"></span>
@@ -2145,8 +2344,104 @@
         </div>
         <div class="trust-pill reveal stagger-5">
           <span class="pill-dot" style="--dot-color: var(--brand-primary)"></span>
-          South Asia · PDPB &amp; DPDP compliant
+          Your data is never sold. Ever.
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY DEEP SECTION -->
+  <section id="privacy-promise" aria-label="Rivora privacy promise"
+    style="padding: var(--s7) 0; background: var(--bg-section-alt);">
+    <div class="container">
+      <div style="max-width: 760px; margin: 0 auto; text-align: center;">
+        <p class="section-label reveal">Your Data. Full Stop.</p>
+        <h2 class="display reveal stagger-2" style="margin-bottom: 24px;">
+          Other apps sell<br>
+          <em>your health data.</em>
+        </h2>
+        <p class="lead reveal stagger-3" style="max-width: 600px; margin: 0 auto 40px;">
+          Your cycle history, symptoms, moods, and health logs are personal. Rivora stores your data securely to provide personalized predictions, cycle insights, and doctor ready reports never to sell it or turn it into advertising data.
+          Your reproductive health should stay private, protected, and fully under your control.
+        </p>
+
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: left;"
+          class="reveal stagger-4">
+          <div
+            style="background: white; border-radius: var(--r-md); padding: 24px; border: 1px solid var(--border-light); box-shadow: 0 2px 12px rgba(26,19,16,0.05);">
+            <div style="font-size: 28px; margin-bottom: 12px;">🔐</div>
+            <h4
+              style="font-family: var(--font-body); font-weight: 600; margin-bottom: 8px; color: var(--text-on-light);">
+              Encrypted & Secure
+            </h4>
+            <p style="font-size: 14px; color: var(--text-on-light-2); line-height: 1.6;">
+              Your cycle data is encrypted during transfer and securely stored using industry standard protection to keep your health information private and protected.
+            </p>
+          </div>
+          <div
+            style="background: white; border-radius: var(--r-md); padding: 24px; border: 1px solid var(--border-light); box-shadow: 0 2px 12px rgba(26,19,16,0.05);">
+            <div style="font-size: 28px; margin-bottom: 12px;">🚫</div>
+            <h4
+              style="font-family: var(--font-body); font-weight: 600; margin-bottom: 8px; color: var(--text-on-light);">
+              No Ads. No Data Selling.</h4>
+            <p style="font-size: 14px; color: var(--text-on-light-2); line-height: 1.6;">No advertisers. No sponsored tracking. No selling reproductive health data. Your cycle history stays focused on your wellbeing not ad targeting.</p>
+          </div>
+          <div
+            style="background: white; border-radius: var(--r-md); padding: 24px; border: 1px solid var(--border-light); box-shadow: 0 2px 12px rgba(26,19,16,0.05);">
+            <div style="font-size: 28px; margin-bottom: 12px;">🗑️</div>
+            <h4
+              style="font-family: var(--font-body); font-weight: 600; margin-bottom: 8px; color: var(--text-on-light);">
+              Delete Anytime</h4>
+            <p style="font-size: 14px; color: var(--text-on-light-2); line-height: 1.6;">You are always in control of your data. You can export or permanently delete your cycle history, symptoms, and health logs directly from the app at any time.
+
+            When you delete your data, it is removed from your device and our systems in accordance with standard data retention and backup policies. No unnecessary retention, no hidden use.</p>
+          </div>
+          <div
+            style="background: white; border-radius: var(--r-md); padding: 24px; border: 1px solid var(--border-light); box-shadow: 0 2px 12px rgba(26,19,16,0.05);">
+            <div style="font-size: 28px; margin-bottom: 12px;">📵</div>
+            <h4
+              style="font-family: var(--font-body); font-weight: 600; margin-bottom: 8px; color: var(--text-on-light);">
+              Hidden Notifications</h4>
+            <p style="font-size: 14px; color: var(--text-on-light-2); line-height: 1.6;">Sensitive information is never shown on your lock screen. Instead, notifications are intelligently hidden or blurred so only you can view full details after unlocking your device.
+            Designed to protect your privacy in shared or public environments while still keeping you informed at a glance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE TRIAL SECTION -->
+  <section id="free-trial" aria-label="Rivora free trial offer"
+    style="padding: var(--s7) 0; background: var(--bg-page);">
+    <div class="container">
+      <div style="max-width: 680px; margin: 0 auto; text-align: center;">
+        <p class="section-label reveal">Try Before You Decide</p>
+        <h2 class="display reveal stagger-2" style="margin-bottom: 20px;">
+          3 months free.<br>
+          <em>No card needed.</em>
+        </h2>
+        <p class="lead reveal stagger-3" style="max-width: 520px; margin: 0 auto 40px;">
+          Premium features partner connection, advanced health insights, skin &amp; hair tracking 
+          free for your first 3 months. No payment upfront. No pressure. If it helps you, you will know.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;" class="reveal stagger-4">
+          <div
+            style="display: flex; align-items: center; gap: 10px; background: rgba(196,94,106,0.08); border: 1px solid rgba(196,94,106,0.2); border-radius: var(--r-full); padding: 12px 20px; font-size: 14px; font-weight: 500; color: var(--brand-primary-dark);">
+            <span>✓</span> Core cycle tracking always free
+          </div>
+          <div
+            style="display: flex; align-items: center; gap: 10px; background: rgba(196,94,106,0.08); border: 1px solid rgba(196,94,106,0.2); border-radius: var(--r-full); padding: 12px 20px; font-size: 14px; font-weight: 500; color: var(--brand-primary-dark);">
+            <span>✓</span> Premium features 3 months free at launch
+          </div>
+          <div
+            style="display: flex; align-items: center; gap: 10px; background: rgba(196,94,106,0.08); border: 1px solid rgba(196,94,106,0.2); border-radius: var(--r-full); padding: 12px 20px; font-size: 14px; font-weight: 500; color: var(--brand-primary-dark);">
+            <span>✓</span> No credit card at signup
+          </div>
+        </div>
+        <p style="font-size: 13px; color: var(--text-on-light-3); margin-top: 20px;" class="reveal stagger-5">Available
+          to all waitlist members at launch.</p>
       </div>
     </div>
   </section>
@@ -2158,7 +2453,7 @@
       <div class="hero-badge reveal"
         style="background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.25); color:white;">
         <span class="badge-pulse" style="background:white;" aria-hidden="true"></span>
-        Launching Soon · Android
+        Launching Soon
       </div>
 
       <h2 class="waitlist-headline reveal stagger-2">
@@ -2167,9 +2462,9 @@
       </h2>
 
       <p class="waitlist-sub reveal stagger-3">
-        Rivora is launching soon on Android. Join thousands of women
-        across South Asia who are already waiting to finally
-        understand their bodies.
+        Rivora is launching. Join the waitlist and get
+        3 months of premium features free partner connection, skin &amp; hair tracking,
+        and advanced health insights. No card needed.
       </p>
 
       <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8" target="_blank" rel="noopener" class="btn-waitlist reveal stagger-4"
@@ -2190,8 +2485,8 @@
       </div>
 
       <div class="footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="contact.html">Contact</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="mailto:hello@rivora.app">Contact</a>
         <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8" target="_blank" rel="noopener">Join Waitlist</a>
       </div>
 
@@ -2201,11 +2496,28 @@
         App is for users aged 18+.
       </p>
 
-      <p class="footer-copy">© 2026 Rivora Technologies. All rights reserved.</p>
+      <p class="footer-copy">© 2026 Rivora App. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
+    // Hamburger mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
     // Scroll reveal
     const allReveal = document.querySelectorAll('.reveal, .reveal-fade, .reveal-up');
     const io = new IntersectionObserver((entries) => {
@@ -2221,27 +2533,7 @@
       nav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
-    // Phase card ambient background
-    const cycleSection = document.getElementById('the-cycle');
-    const phaseColors = {
-      'var(--phase-reset)': '#fdf5f5',
-      'var(--phase-energy)': '#fdf8f0',
-      'var(--phase-peak)': '#fdf4f4',
-      'var(--phase-reflect)': '#f3f5fa',
-    };
-    const phaseCards = document.querySelectorAll('.phase-card');
-    const phaseObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting && cycleSection) {
-          const c = getComputedStyle(e.target).getPropertyValue('--phase-color').trim();
-          if (c.includes('reset')) cycleSection.style.backgroundColor = '#fdf5f5';
-          else if (c.includes('energy')) cycleSection.style.backgroundColor = '#fdf8f0';
-          else if (c.includes('peak')) cycleSection.style.backgroundColor = '#fdf4f4';
-          else if (c.includes('reflect')) cycleSection.style.backgroundColor = '#f3f5fa';
-        }
-      });
-    }, { threshold: 0.5 });
-    phaseCards.forEach(c => phaseObs.observe(c));
+
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
