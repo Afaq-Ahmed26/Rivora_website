@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rivora — Women's health & cycle tracking for South Asia. Understand your body, your cycle, and your health. PCOS, PCOD, irregular cycles — all supported.">
+  <meta name="description"
+    content="Rivora — Women's health & cycle tracking for South Asia. Understand your body, your cycle, and your health. PCOS, PCOD, irregular cycles — all supported.">
   <meta property="og:title" content="Rivora — Know Your Body.">
-  <meta property="og:description" content="The women's health companion built for South Asia. Track your cycle, understand your health, share with your partner on your terms.">
+  <meta property="og:description"
+    content="The women's health companion built for South Asia. Track your cycle, understand your health, share with your partner on your terms.">
   <meta name="theme-color" content="#c45e6a">
   <title>Rivora — Know Your Body.</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
       /* ── Brand palette: warm terracotta × deep sage × warm cream ── */
-      --brand-primary: #c45e6a;      /* warm rose-red */
+      --brand-primary: #c45e6a;
+      /* warm rose-red */
       --brand-primary-dark: #9e3d4a;
       --brand-primary-light: #e8a0a9;
-      --brand-primary-glow: rgba(196,94,106,0.14);
+      --brand-primary-glow: rgba(196, 94, 106, 0.14);
 
-      --brand-accent: #4a7c6a;       /* deep sage green — health, nature */
+      --brand-accent: #4a7c6a;
+      /* deep sage green — health, nature */
       --brand-accent-light: #8ab5a5;
-      --brand-accent-glow: rgba(74,124,106,0.12);
+      --brand-accent-glow: rgba(74, 124, 106, 0.12);
 
-      --brand-gold: #c9974a;         /* warm gold — premium, warmth */
+      --brand-gold: #c9974a;
+      /* warm gold — premium, warmth */
       --brand-gold-light: #e8c48a;
 
       /* Phase colors — more earthy, less saturated */
@@ -39,8 +47,8 @@
       --bg-section-alt: #f3ede8;
       --bg-dark: #1a1310;
       --bg-dark-2: #221c18;
-      --bg-dark-card: rgba(255,255,255,0.04);
-      --bg-dark-card-hover: rgba(255,255,255,0.07);
+      --bg-dark-card: rgba(255, 255, 255, 0.04);
+      --bg-dark-card-hover: rgba(255, 255, 255, 0.07);
 
       /* Text */
       --text-on-light: #1a1310;
@@ -51,26 +59,45 @@
       --text-on-dark-3: #7a6860;
 
       /* Borders */
-      --border-light: rgba(26,19,16,0.08);
-      --border-medium: rgba(26,19,16,0.15);
-      --border-dark-subtle: rgba(255,255,255,0.08);
-      --border-dark-medium: rgba(255,255,255,0.14);
+      --border-light: rgba(26, 19, 16, 0.08);
+      --border-medium: rgba(26, 19, 16, 0.15);
+      --border-dark-subtle: rgba(255, 255, 255, 0.08);
+      --border-dark-medium: rgba(255, 255, 255, 0.14);
 
       /* Spacing */
-      --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px;
-      --s5: 48px; --s6: 64px; --s7: 96px; --s8: 128px;
+      --s1: 8px;
+      --s2: 16px;
+      --s3: 24px;
+      --s4: 32px;
+      --s5: 48px;
+      --s6: 64px;
+      --s7: 96px;
+      --s8: 128px;
 
       /* Fonts */
       --font-display: 'Playfair Display', Georgia, serif;
       --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
 
       /* Radii */
-      --r-sm: 8px; --r-md: 16px; --r-lg: 24px;
-      --r-xl: 40px; --r-full: 9999px;
+      --r-sm: 8px;
+      --r-md: 16px;
+      --r-lg: 24px;
+      --r-xl: 40px;
+      --r-full: 9999px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
     body {
       background: var(--bg-page);
@@ -82,8 +109,14 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    img { display: block; max-width: 100%; }
-    a { text-decoration: none; }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    }
 
     :focus-visible {
       outline: 2px solid var(--brand-primary);
@@ -108,7 +141,9 @@
       margin-bottom: var(--s3);
     }
 
-    .section-label.on-dark { color: var(--brand-primary-light); }
+    .section-label.on-dark {
+      color: var(--brand-primary-light);
+    }
 
     h2.display {
       font-family: var(--font-display);
@@ -124,8 +159,13 @@
       color: var(--brand-primary);
     }
 
-    h2.display.on-dark { color: var(--text-on-dark); }
-    h2.display.on-dark em { color: var(--brand-primary-light); }
+    h2.display.on-dark {
+      color: var(--text-on-dark);
+    }
+
+    h2.display.on-dark em {
+      color: var(--brand-primary-light);
+    }
 
     .lead {
       font-size: clamp(17px, 1.8vw, 20px);
@@ -134,56 +174,137 @@
       line-height: 1.8;
     }
 
-    .lead.on-dark { color: var(--text-on-dark-2); }
+    .lead.on-dark {
+      color: var(--text-on-dark-2);
+    }
 
     /* ── Animations ── */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
-      transition: opacity 0.85s cubic-bezier(0.16,1,0.3,1),
-                  transform 0.85s cubic-bezier(0.16,1,0.3,1);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-fade { opacity: 0; transition: opacity 1.1s ease; }
-    .reveal-fade.visible { opacity: 1; }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-fade {
+      opacity: 0;
+      transition: opacity 1.1s ease;
+    }
+
+    .reveal-fade.visible {
+      opacity: 1;
+    }
+
     .reveal-up {
       opacity: 0;
       transform: translateY(40px);
-      transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1),
-                  transform 0.7s cubic-bezier(0.16,1,0.3,1);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .reveal-up.visible { opacity: 1; transform: none; }
 
-    .stagger-1 { transition-delay: 0ms; }
-    .stagger-2 { transition-delay: 100ms; }
-    .stagger-3 { transition-delay: 200ms; }
-    .stagger-4 { transition-delay: 300ms; }
-    .stagger-5 { transition-delay: 400ms; }
-    .stagger-6 { transition-delay: 500ms; }
+    .reveal-up.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .stagger-1 {
+      transition-delay: 0ms;
+    }
+
+    .stagger-2 {
+      transition-delay: 100ms;
+    }
+
+    .stagger-3 {
+      transition-delay: 200ms;
+    }
+
+    .stagger-4 {
+      transition-delay: 300ms;
+    }
+
+    .stagger-5 {
+      transition-delay: 400ms;
+    }
+
+    .stagger-6 {
+      transition-delay: 500ms;
+    }
 
     @keyframes float-pulse {
-      0%, 100% { transform: translate(0,0) scale(1); }
-      33% { transform: translate(20px,-15px) scale(1.04); }
-      66% { transform: translate(-15px,12px) scale(0.97); }
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      33% {
+        transform: translate(20px, -15px) scale(1.04);
+      }
+
+      66% {
+        transform: translate(-15px, 12px) scale(0.97);
+      }
     }
 
     @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      15% { transform: scale(1.15); }
-      30% { transform: scale(1); }
-      45% { transform: scale(1.08); }
-      60% { transform: scale(1); }
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      15% {
+        transform: scale(1.15);
+      }
+
+      30% {
+        transform: scale(1);
+      }
+
+      45% {
+        transform: scale(1.08);
+      }
+
+      60% {
+        transform: scale(1);
+      }
     }
 
     @keyframes scroll-cue {
-      0% { opacity: 0; transform: translateY(0); }
-      50% { opacity: 1; }
-      100% { opacity: 0; transform: translateY(12px); }
+      0% {
+        opacity: 0;
+        transform: translateY(0);
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(12px);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .reveal, .reveal-fade, .reveal-up { opacity: 1; transform: none; transition: none; }
-      * { animation: none !important; }
+
+      .reveal,
+      .reveal-fade,
+      .reveal-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      * {
+        animation: none !important;
+      }
     }
 
     /* ══════════════════════════════════════════
@@ -191,7 +312,9 @@
     ══════════════════════════════════════════ */
     #main-nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
       height: 68px;
       padding: 0 clamp(20px, 5vw, 80px);
@@ -199,11 +322,13 @@
       transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
       border-bottom: 1px solid transparent;
     }
+
     #main-nav.scrolled {
-      background: rgba(250,247,244,0.92);
+      background: rgba(250, 247, 244, 0.92);
       backdrop-filter: blur(20px) saturate(180%);
       border-bottom-color: var(--border-light);
     }
+
     .nav-inner {
       max-width: 1240px;
       margin: 0 auto;
@@ -212,6 +337,7 @@
       align-items: center;
       justify-content: space-between;
     }
+
     .nav-logo {
       font-family: var(--font-display);
       font-size: 26px;
@@ -219,19 +345,28 @@
       color: var(--text-on-light);
       letter-spacing: -0.02em;
     }
-    .nav-logo span { color: var(--brand-primary); }
+
+    .nav-logo span {
+      color: var(--brand-primary);
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
       gap: var(--s3);
     }
+
     .nav-link {
       font-size: 14px;
       font-weight: 500;
       color: var(--text-on-light-2);
       transition: color 0.2s;
     }
-    .nav-link:hover { color: var(--brand-primary); }
+
+    .nav-link:hover {
+      color: var(--brand-primary);
+    }
+
     .btn-nav {
       font-family: var(--font-body);
       font-size: 14px;
@@ -244,10 +379,16 @@
       cursor: pointer;
       transition: background 0.25s, transform 0.2s;
     }
-    .btn-nav:hover { background: var(--brand-primary-dark); transform: translateY(-1px); }
+
+    .btn-nav:hover {
+      background: var(--brand-primary-dark);
+      transform: translateY(-1px);
+    }
 
     @media (max-width: 640px) {
-      .nav-links .nav-link { display: none; }
+      .nav-links .nav-link {
+        display: none;
+      }
     }
 
     /* ══════════════════════════════════════════
@@ -267,9 +408,9 @@
       position: absolute;
       inset: 0;
       background-image:
-        radial-gradient(ellipse 80% 60% at 70% 30%, rgba(196,94,106,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(74,124,106,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 40% at 50% 50%, rgba(201,151,74,0.05) 0%, transparent 50%);
+        radial-gradient(ellipse 80% 60% at 70% 30%, rgba(196, 94, 106, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(74, 124, 106, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 50% 50%, rgba(201, 151, 74, 0.05) 0%, transparent 50%);
       pointer-events: none;
     }
 
@@ -280,16 +421,22 @@
       filter: blur(60px);
       pointer-events: none;
     }
+
     .hero-orb-1 {
-      width: 500px; height: 500px;
-      top: -80px; right: -120px;
-      background: rgba(196,94,106,0.18);
+      width: 500px;
+      height: 500px;
+      top: -80px;
+      right: -120px;
+      background: rgba(196, 94, 106, 0.18);
       animation: float-pulse 14s ease-in-out infinite;
     }
+
     .hero-orb-2 {
-      width: 350px; height: 350px;
-      bottom: -60px; left: -80px;
-      background: rgba(74,124,106,0.12);
+      width: 350px;
+      height: 350px;
+      bottom: -60px;
+      left: -80px;
+      background: rgba(74, 124, 106, 0.12);
       animation: float-pulse 18s ease-in-out infinite reverse;
     }
 
@@ -306,8 +453,14 @@
     }
 
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; text-align: center; }
-      .hero-right { display: none; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-right {
+        display: none;
+      }
     }
 
     .hero-badge {
@@ -319,15 +472,16 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--brand-primary);
-      background: rgba(196,94,106,0.08);
-      border: 1px solid rgba(196,94,106,0.2);
+      background: rgba(196, 94, 106, 0.08);
+      border: 1px solid rgba(196, 94, 106, 0.2);
       border-radius: var(--r-full);
       padding: 8px 18px;
       margin-bottom: var(--s4);
     }
 
     .badge-pulse {
-      width: 7px; height: 7px;
+      width: 7px;
+      height: 7px;
       background: var(--brand-primary);
       border-radius: 50%;
       animation: heartbeat 2.5s ease-in-out infinite;
@@ -358,7 +512,10 @@
     }
 
     @media (max-width: 900px) {
-      .hero-sub { margin-left: auto; margin-right: auto; }
+      .hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     .hero-cta-row {
@@ -368,7 +525,11 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 900px) { .hero-cta-row { justify-content: center; } }
+    @media (max-width: 900px) {
+      .hero-cta-row {
+        justify-content: center;
+      }
+    }
 
     .btn-primary {
       display: inline-flex;
@@ -384,12 +545,13 @@
       padding: 16px 40px;
       cursor: pointer;
       transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
-      box-shadow: 0 4px 24px rgba(196,94,106,0.3);
+      box-shadow: 0 4px 24px rgba(196, 94, 106, 0.3);
     }
+
     .btn-primary:hover {
       background: var(--brand-primary-dark);
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(196,94,106,0.4);
+      box-shadow: 0 8px 32px rgba(196, 94, 106, 0.4);
     }
 
     .btn-ghost {
@@ -400,7 +562,10 @@
       border-radius: var(--r-full);
       transition: color 0.2s;
     }
-    .btn-ghost:hover { color: var(--brand-primary); }
+
+    .btn-ghost:hover {
+      color: var(--brand-primary);
+    }
 
     .hero-note {
       font-size: 13px;
@@ -421,7 +586,7 @@
       background: white;
       border-radius: 28px;
       padding: 24px 20px;
-      box-shadow: 0 32px 80px rgba(26,19,16,0.12), 0 8px 24px rgba(26,19,16,0.06);
+      box-shadow: 0 32px 80px rgba(26, 19, 16, 0.12), 0 8px 24px rgba(26, 19, 16, 0.06);
       border: 1px solid var(--border-light);
       position: relative;
       z-index: 2;
@@ -439,7 +604,7 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      background: rgba(196,94,106,0.1);
+      background: rgba(196, 94, 106, 0.1);
       color: var(--brand-primary);
       padding: 4px 12px;
       border-radius: var(--r-full);
@@ -481,7 +646,7 @@
     .metric-bar {
       flex: 1;
       height: 6px;
-      background: rgba(26,19,16,0.07);
+      background: rgba(26, 19, 16, 0.07);
       border-radius: var(--r-full);
       margin: 0 12px;
       overflow: hidden;
@@ -502,11 +667,11 @@
     }
 
     .mockup-tip {
-      background: linear-gradient(135deg, rgba(74,124,106,0.08) 0%, rgba(196,94,106,0.06) 100%);
+      background: linear-gradient(135deg, rgba(74, 124, 106, 0.08) 0%, rgba(196, 94, 106, 0.06) 100%);
       border-radius: 12px;
       padding: 12px 14px;
       margin-top: 16px;
-      border: 1px solid rgba(74,124,106,0.15);
+      border: 1px solid rgba(74, 124, 106, 0.15);
     }
 
     .tip-label {
@@ -531,7 +696,7 @@
       background: var(--bg-dark);
       border-radius: 20px;
       padding: 18px 16px;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
       border: 1px solid var(--border-dark-subtle);
       bottom: -24px;
       left: -60px;
@@ -576,7 +741,8 @@
     }
 
     .scroll-arrow {
-      width: 20px; height: 20px;
+      width: 20px;
+      height: 20px;
       animation: scroll-cue 2s ease-in-out infinite;
     }
 
@@ -594,8 +760,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(196,94,106,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(74,124,106,0.06) 0%, transparent 60%);
+        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(196, 94, 106, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(74, 124, 106, 0.06) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -614,8 +780,17 @@
       z-index: 2;
     }
 
-    @media (max-width: 900px) { .health-grid { grid-template-columns: 1fr; } }
-    @media (min-width: 600px) and (max-width: 900px) { .health-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 900px) {
+      .health-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      .health-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
     .health-card {
       background: var(--bg-dark-card);
@@ -630,7 +805,9 @@
     .health-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 3px;
       background: var(--card-accent, var(--brand-primary));
       border-radius: var(--r-lg) var(--r-lg) 0 0;
@@ -643,9 +820,10 @@
     }
 
     .health-card-icon {
-      width: 48px; height: 48px;
+      width: 48px;
+      height: 48px;
       border-radius: var(--r-sm);
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--border-dark-subtle);
       display: flex;
       align-items: center;
@@ -672,14 +850,20 @@
 
     /* Featured health card (PCOS) */
     .health-card-featured {
-      background: rgba(196,94,106,0.08);
-      border-color: rgba(196,94,106,0.2);
+      background: rgba(196, 94, 106, 0.08);
+      border-color: rgba(196, 94, 106, 0.2);
       grid-column: span 2;
     }
 
-    @media (max-width: 900px) { .health-card-featured { grid-column: span 1; } }
+    @media (max-width: 900px) {
+      .health-card-featured {
+        grid-column: span 1;
+      }
+    }
 
-    .health-card-featured h3 { font-size: 28px; }
+    .health-card-featured h3 {
+      font-size: 28px;
+    }
 
     .pcos-pills {
       display: flex;
@@ -692,8 +876,8 @@
       font-size: 12px;
       font-weight: 600;
       color: var(--brand-primary-light);
-      background: rgba(196,94,106,0.12);
-      border: 1px solid rgba(196,94,106,0.2);
+      background: rgba(196, 94, 106, 0.12);
+      border: 1px solid rgba(196, 94, 106, 0.2);
       border-radius: var(--r-full);
       padding: 5px 14px;
     }
@@ -730,7 +914,7 @@
       font-size: 12px;
       font-weight: 700;
       color: var(--brand-primary);
-      background: rgba(196,94,106,0.1);
+      background: rgba(196, 94, 106, 0.1);
       padding: 3px 10px;
       border-radius: var(--r-full);
     }
@@ -741,8 +925,17 @@
       gap: var(--s3);
     }
 
-    @media (max-width: 1000px) { .phase-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 540px) { .phase-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 1000px) {
+      .phase-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 540px) {
+      .phase-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     .phase-card {
       background: white;
@@ -755,7 +948,7 @@
 
     .phase-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 48px rgba(26,19,16,0.1);
+      box-shadow: 0 20px 48px rgba(26, 19, 16, 0.1);
     }
 
     .phase-number {
@@ -792,8 +985,8 @@
     }
 
     .phase-nutrition {
-      background: rgba(74,124,106,0.08);
-      border: 1px solid rgba(74,124,106,0.15);
+      background: rgba(74, 124, 106, 0.08);
+      border: 1px solid rgba(74, 124, 106, 0.15);
       border-radius: var(--r-sm);
       padding: 10px 14px;
       margin-bottom: var(--s2);
@@ -824,7 +1017,7 @@
       font-size: 11px;
       font-weight: 600;
       color: var(--phase-color);
-      background: rgba(255,255,255,0.7);
+      background: rgba(255, 255, 255, 0.7);
       border: 1px solid var(--phase-color);
       border-radius: var(--r-full);
       padding: 3px 10px;
@@ -846,7 +1039,11 @@
       align-items: center;
     }
 
-    @media (max-width: 800px) { .why-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 800px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     .why-stats {
       display: grid;
@@ -860,7 +1057,7 @@
       border-radius: var(--r-lg);
       padding: var(--s4);
       text-align: center;
-      box-shadow: 0 4px 20px rgba(26,19,16,0.04);
+      box-shadow: 0 4px 20px rgba(26, 19, 16, 0.04);
     }
 
     .stat-card.accent {
@@ -878,7 +1075,9 @@
       margin-bottom: 8px;
     }
 
-    .stat-card.accent .stat-number { color: white; }
+    .stat-card.accent .stat-number {
+      color: white;
+    }
 
     .stat-label {
       font-size: 13px;
@@ -887,7 +1086,9 @@
       line-height: 1.5;
     }
 
-    .stat-card.accent .stat-label { color: rgba(255,255,255,0.8); }
+    .stat-card.accent .stat-label {
+      color: rgba(255, 255, 255, 0.8);
+    }
 
     /* ══════════════════════════════════════════
        DUAL VALUE — her first, then him
@@ -903,8 +1104,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 50% 60% at 30% 50%, rgba(196,94,106,0.06) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 60% at 70% 50%, rgba(74,124,106,0.05) 0%, transparent 60%);
+        radial-gradient(ellipse 50% 60% at 30% 50%, rgba(196, 94, 106, 0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 70% 50%, rgba(74, 124, 106, 0.05) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -925,7 +1126,11 @@
       z-index: 2;
     }
 
-    @media (max-width: 700px) { .dual-cards { grid-template-columns: 1fr; } }
+    @media (max-width: 700px) {
+      .dual-cards {
+        grid-template-columns: 1fr;
+      }
+    }
 
     .dual-card {
       background: var(--bg-dark-card);
@@ -956,8 +1161,13 @@
       margin-bottom: var(--s2);
     }
 
-    .her-label { color: var(--brand-primary-light); }
-    .him-label { color: var(--brand-accent-light); }
+    .her-label {
+      color: var(--brand-primary-light);
+    }
+
+    .him-label {
+      color: var(--brand-accent-light);
+    }
 
     .dual-card h3 {
       font-family: var(--font-display);
@@ -985,8 +1195,17 @@
       line-height: 1.55;
     }
 
-    .check-her { color: var(--brand-primary-light); font-size: 15px; flex-shrink: 0; }
-    .check-him { color: var(--brand-accent-light); font-size: 15px; flex-shrink: 0; }
+    .check-her {
+      color: var(--brand-primary-light);
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .check-him {
+      color: var(--brand-accent-light);
+      font-size: 15px;
+      flex-shrink: 0;
+    }
 
     /* ══════════════════════════════════════════
        FEATURES
@@ -1008,8 +1227,17 @@
       gap: var(--s3);
     }
 
-    @media (max-width: 900px) { .features-grid { grid-template-columns: 1fr; } }
-    @media (min-width: 600px) and (max-width: 900px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 900px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
     .feature-card {
       background: white;
@@ -1018,19 +1246,20 @@
       padding: var(--s5);
       text-align: left;
       transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-      box-shadow: 0 2px 12px rgba(26,19,16,0.04);
+      box-shadow: 0 2px 12px rgba(26, 19, 16, 0.04);
     }
 
     .feature-card:hover {
       border-color: var(--border-medium);
-      box-shadow: 0 12px 40px rgba(26,19,16,0.08);
+      box-shadow: 0 12px 40px rgba(26, 19, 16, 0.08);
       transform: translateY(-3px);
     }
 
     .feature-icon {
-      width: 52px; height: 52px;
-      background: var(--icon-bg, rgba(196,94,106,0.08));
-      border: 1px solid var(--icon-border, rgba(196,94,106,0.15));
+      width: 52px;
+      height: 52px;
+      background: var(--icon-bg, rgba(196, 94, 106, 0.08));
+      border: 1px solid var(--icon-border, rgba(196, 94, 106, 0.15));
       border-radius: var(--r-md);
       display: flex;
       align-items: center;
@@ -1083,14 +1312,17 @@
       border: 1px solid var(--border-light);
       border-radius: var(--r-full);
       padding: 12px 24px;
-      box-shadow: 0 2px 12px rgba(26,19,16,0.04);
+      box-shadow: 0 2px 12px rgba(26, 19, 16, 0.04);
       transition: border-color 0.3s;
     }
 
-    .trust-pill:hover { border-color: var(--border-medium); }
+    .trust-pill:hover {
+      border-color: var(--border-medium);
+    }
 
     .pill-dot {
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--dot-color, var(--brand-primary));
       flex-shrink: 0;
@@ -1111,8 +1343,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 80% at 20% 40%, rgba(255,255,255,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 60% at 80% 60%, rgba(0,0,0,0.15) 0%, transparent 60%);
+        radial-gradient(ellipse 60% 80% at 20% 40%, rgba(255, 255, 255, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 80% 60%, rgba(0, 0, 0, 0.15) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -1135,13 +1367,13 @@
 
     .waitlist-headline em {
       font-style: italic;
-      color: rgba(255,255,255,0.75);
+      color: rgba(255, 255, 255, 0.75);
     }
 
     .waitlist-sub {
       font-size: clamp(16px, 1.8vw, 19px);
       font-weight: 300;
-      color: rgba(255,255,255,0.82);
+      color: rgba(255, 255, 255, 0.82);
       line-height: 1.8;
       margin-bottom: var(--s5);
     }
@@ -1160,17 +1392,17 @@
       padding: 20px 52px;
       cursor: pointer;
       transition: background 0.25s, transform 0.2s;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
 
     .btn-waitlist:hover {
-      background: rgba(255,255,255,0.92);
+      background: rgba(255, 255, 255, 0.92);
       transform: translateY(-2px);
     }
 
     .waitlist-note {
       font-size: 13px;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       margin-top: var(--s3);
       letter-spacing: 0.04em;
     }
@@ -1201,7 +1433,9 @@
       color: var(--text-on-dark);
     }
 
-    .footer-logo span { color: var(--brand-primary-light); }
+    .footer-logo span {
+      color: var(--brand-primary-light);
+    }
 
     .footer-tagline {
       font-size: 14px;
@@ -1224,7 +1458,9 @@
       transition: color 0.25s;
     }
 
-    .footer-links a:hover { color: var(--brand-primary-light); }
+    .footer-links a:hover {
+      color: var(--brand-primary-light);
+    }
 
     .footer-copy {
       font-size: 12px;
@@ -1238,8 +1474,186 @@
       line-height: 1.6;
       opacity: 0.7;
     }
+
+    /* ══════════════════════════════════════════
+       MOBILE FIXES — comprehensive
+    ══════════════════════════════════════════ */
+    @media (max-width: 480px) {
+
+      /* Hero */
+      #hero {
+        padding: 90px 20px 60px;
+        min-height: auto;
+      }
+
+      .hero-headline {
+        font-size: clamp(40px, 11vw, 56px);
+      }
+
+      .hero-sub {
+        font-size: 15px;
+      }
+
+      .hero-badge {
+        font-size: 10px;
+        padding: 6px 14px;
+      }
+
+      .btn-primary {
+        font-size: 15px;
+        padding: 14px 28px;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .btn-ghost {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero-cta-row {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      /* Phase grid */
+      .phase-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+      }
+
+      /* Health grid */
+      .health-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .health-card-featured {
+        grid-column: span 1 !important;
+      }
+
+      /* Why grid */
+      .why-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+      }
+
+      .why-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .stat-number {
+        font-size: 40px;
+      }
+
+      /* Dual cards */
+      .dual-cards {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Features grid */
+      .features-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Trust pills */
+      .trust-pills {
+        gap: 10px;
+      }
+
+      .trust-pill {
+        font-size: 13px;
+        padding: 10px 16px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      /* Waitlist */
+      #waitlist {
+        padding: 64px 20px;
+      }
+
+      .waitlist-headline {
+        font-size: clamp(36px, 10vw, 52px);
+      }
+
+      .btn-waitlist {
+        font-size: 15px;
+        padding: 16px 32px;
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* Section headings */
+      h2.display {
+        font-size: clamp(30px, 8vw, 44px);
+      }
+
+      /* Section padding */
+      #health,
+      #the-cycle,
+      #why-rivora,
+      #dual-value,
+      #features,
+      #trust {
+        padding: 64px 20px;
+      }
+
+      /* Cycle callout */
+      .cycle-length-callout {
+        font-size: 12px;
+        padding: 8px 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* Pcos pills wrap */
+      .pcos-pills {
+        gap: 6px;
+      }
+
+      .pcos-pill {
+        font-size: 11px;
+        padding: 4px 10px;
+      }
+
+      /* Footer */
+      .footer-links {
+        gap: 16px;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .pcos-condition-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .why-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+      }
+
+      #health,
+      #the-cycle,
+      #why-rivora,
+      #dual-value,
+      #features,
+      #trust {
+        padding: 80px 24px;
+      }
+
+      .phase-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <!-- NAV -->
@@ -1250,10 +1664,8 @@
         <a href="#health" class="nav-link">For Her</a>
         <a href="#the-cycle" class="nav-link">The Cycle</a>
         <a href="#dual-value" class="nav-link">For Him</a>
-        <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8"
-           target="_blank" rel="noopener"
-           class="btn-nav"
-           aria-label="Join Rivora waitlist">
+        <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8" target="_blank" rel="noopener" class="btn-nav"
+          aria-label="Join Rivora waitlist">
           Join Waitlist
         </a>
       </div>
@@ -1270,7 +1682,7 @@
       <div class="hero-left">
         <div class="hero-badge reveal stagger-1">
           <span class="badge-pulse" aria-hidden="true"></span>
-          Coming Soon · Android · South Asia
+          Coming Soon
         </div>
 
         <h1 class="hero-headline reveal stagger-2">
@@ -1280,19 +1692,18 @@
         </h1>
 
         <p class="hero-sub reveal stagger-3">
-          Rivora tracks your unique cycle — whether it's 21 days or 40 — 
-          gives you phase-specific health guidance, and helps your partner 
+          Rivora tracks your unique cycle — whether it's 21 days or 40 —
+          gives you phase-specific health guidance, and helps your partner
           understand you. Finally.
         </p>
 
         <div class="hero-cta-row reveal stagger-4">
-          <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8"
-             target="_blank" rel="noopener"
-             class="btn-primary"
-             aria-label="Join Rivora waitlist">
+          <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8" target="_blank" rel="noopener" class="btn-primary"
+            aria-label="Join Rivora waitlist">
             Join the Waitlist
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </a>
           <a href="#health" class="btn-ghost">See how it works</a>
@@ -1313,23 +1724,29 @@
 
             <div class="mockup-metric">
               <span class="metric-label">Energy</span>
-              <div class="metric-bar"><div class="metric-fill" style="width:80%; background:var(--brand-gold);"></div></div>
+              <div class="metric-bar">
+                <div class="metric-fill" style="width:80%; background:var(--brand-gold);"></div>
+              </div>
               <span class="metric-val">8/10</span>
             </div>
             <div class="mockup-metric">
               <span class="metric-label">Mood</span>
-              <div class="metric-bar"><div class="metric-fill" style="width:75%; background:var(--brand-accent);"></div></div>
+              <div class="metric-bar">
+                <div class="metric-fill" style="width:75%; background:var(--brand-accent);"></div>
+              </div>
               <span class="metric-val">7/10</span>
             </div>
             <div class="mockup-metric">
               <span class="metric-label">Cramps</span>
-              <div class="metric-bar"><div class="metric-fill" style="width:10%; background:var(--brand-primary);"></div></div>
+              <div class="metric-bar">
+                <div class="metric-fill" style="width:10%; background:var(--brand-primary);"></div>
+              </div>
               <span class="metric-val">1/10</span>
             </div>
 
             <div class="mockup-tip">
               <div class="tip-label">Today's Health Tip</div>
-              <div class="tip-text">Boost iron: spinach, lentils, chicken. Your body absorbs it best this week. 🥬</div>
+              <div class="tip-text">Boost iron: daal, kaleji, chana. Your body absorbs it best this week. 🌿</div>
             </div>
           </div>
 
@@ -1345,7 +1762,8 @@
 
     <div class="scroll-hint" aria-hidden="true">
       <svg class="scroll-arrow" viewBox="0 0 20 20" fill="none">
-        <path d="M10 4v12M5 11l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 4v12M5 11l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          stroke-linejoin="round" />
       </svg>
       <span>Scroll</span>
     </div>
@@ -1362,88 +1780,82 @@
           <em>period tracker.</em>
         </h2>
         <p class="lead on-dark reveal stagger-3" style="max-width:560px; margin:0 auto; margin-top:16px;">
-          Rivora is a full women's health companion — cycle awareness, 
-          nutrition, nutrient deficiency detection, and PCOS/PCOD support. 
-          All in one place.
+          Rivora is a full women's health companion cycle awareness,
+          nutrition, nutrient deficiency detection, and support for PCOD &amp; PMOS
+          (what used to be called PCOS). All in one place.
         </p>
       </div>
 
-      <div class="health-grid">
-        <!-- PCOS/PCOD — the featured card -->
-        <div class="health-card health-card-featured reveal-up stagger-1"
-             style="--card-accent: var(--brand-primary)">
-          <div class="health-card-icon">🩺</div>
-          <h3>PCOS & PCOD Support</h3>
-          <p>
-            Cycles of 21 to 40+ days are all valid here. Rivora adapts 
-            to your unique pattern, not a textbook average. Irregular cycles, 
-            skipped months, and PCOS-related changes are tracked 
-            with honest confidence indicators — no false precision.
-          </p>
-          <div class="pcos-pills">
-            <span class="pcos-pill">Irregular cycle mode</span>
-            <span class="pcos-pill">21–40+ day support</span>
-            <span class="pcos-pill">Confidence indicators</span>
-            <span class="pcos-pill">Doctor-visit export</span>
-            <span class="pcos-pill">Pattern detection</span>
-          </div>
-        </div>
-
-        <div class="health-card reveal-up stagger-2"
-             style="--card-accent: var(--brand-gold)">
-          <div class="health-card-icon">🥗</div>
-          <h3>Phase-Smart Nutrition</h3>
-          <p>
-            Iron in Week 1. Magnesium in Week 4. 
-            Every phase depletes different nutrients. Rivora tells you 
-            what your body needs — and what foods deliver it.
-          </p>
-        </div>
-
-        <div class="health-card reveal-up stagger-3"
-             style="--card-accent: var(--brand-accent)">
-          <div class="health-card-icon">💊</div>
-          <h3>Nutrient Deficiency Detection</h3>
-          <p>
-            Log your symptoms and mood. Rivora spots patterns linked 
-            to iron, B12, calcium, magnesium, and vitamin D deficiencies 
-            — and suggests what to eat or supplement.
-          </p>
-        </div>
-
-        <div class="health-card reveal-up stagger-4"
-             style="--card-accent: var(--phase-reflect)">
-          <div class="health-card-icon">💧</div>
-          <h3>Hydration & Energy</h3>
-          <p>
-            Your hydration needs shift across phases. Rivora adjusts 
-            your daily target and reminds you at the right time — 
-            not just a flat 8-glasses rule.
-          </p>
-        </div>
-
-        <div class="health-card reveal-up stagger-5"
-             style="--card-accent: var(--phase-peak)">
-          <div class="health-card-icon">📋</div>
-          <h3>Symptom Logging</h3>
-          <p>
-            Track cramps, acne, bloating, headaches, and mood shifts. 
-            After 3–6 months, export a structured health report to 
-            share with your doctor.
-          </p>
-        </div>
-
-        <div class="health-card reveal-up stagger-6"
-             style="--card-accent: var(--brand-primary)">
-          <div class="health-card-icon">🔒</div>
-          <h3>Privacy by Default</h3>
-          <p>
-            App lock, biometric PIN, and hidden notification text. 
-            On shared devices, your health data stays yours. 
-            Built for South Asian homes from day one.
-          </p>
+      <!-- PCOD / PCOS / PMOS — featured card -->
+      <div class="health-card health-card-featured reveal-up stagger-1" style="--card-accent: var(--brand-primary)">
+        <div class="health-card-icon">🩺</div>
+        <h3>PCOD, &amp; PCOS/PMOS Support</h3>
+        <p>
+          Irregular cycles, skipped months, unpredictable patterns —
+          Rivora is built for you. No fake 28-day assumptions.
+          Just honest tracking that adapts to your body, whatever
+          name your doctor has given it.
+        </p>
+        <div class="pcos-pills">
+          <span class="pcos-pill">Irregular cycle mode</span>
+          <span class="pcos-pill">21–40+ day support</span>
+          <span class="pcos-pill">Pattern detection</span>
+          <span class="pcos-pill">Doctor-visit export</span>
+          <span class="pcos-pill">No false precision</span>
+          <span class="pcos-pill">PCOD &amp; PMOS aware</span>
         </div>
       </div>
+
+      <div class="health-card reveal-up stagger-2" style="--card-accent: var(--brand-gold)">
+        <div class="health-card-icon">🥗</div>
+        <h3>Phase-Smart Nutrition</h3>
+        <p>
+          Iron in Week 1. Magnesium in Week 4.
+          Every phase depletes different nutrients. Rivora tells you
+          what your body needs — and what foods deliver it.
+        </p>
+      </div>
+
+      <div class="health-card reveal-up stagger-3" style="--card-accent: var(--brand-accent)">
+        <div class="health-card-icon">💊</div>
+        <h3>Nutrient Deficiency Detection</h3>
+        <p>
+          Log your symptoms and mood. Rivora spots patterns linked
+          to iron, B12, calcium, magnesium, and vitamin D deficiencies
+          — and suggests what to eat or supplement.
+        </p>
+      </div>
+
+      <div class="health-card reveal-up stagger-4" style="--card-accent: var(--phase-reflect)">
+        <div class="health-card-icon">💧</div>
+        <h3>Hydration & Energy</h3>
+        <p>
+          Your hydration needs shift across phases. Rivora adjusts
+          your daily target and reminds you at the right time —
+          not just a flat 8-glasses rule.
+        </p>
+      </div>
+
+      <div class="health-card reveal-up stagger-5" style="--card-accent: var(--phase-peak)">
+        <div class="health-card-icon">📋</div>
+        <h3>Symptom Logging</h3>
+        <p>
+          Track cramps, acne, bloating, headaches, and mood shifts.
+          After 3–6 months, export a structured health report to
+          share with your doctor.
+        </p>
+      </div>
+
+      <div class="health-card reveal-up stagger-6" style="--card-accent: var(--brand-primary)">
+        <div class="health-card-icon">🔒</div>
+        <h3>Privacy by Default</h3>
+        <p>
+          App lock, biometric PIN, and hidden notification text.
+          On shared devices, your health data stays yours.
+          Built for South Asian homes from day one.
+        </p>
+      </div>
+    </div>
     </div>
   </section>
 
@@ -1457,26 +1869,27 @@
           <em>Your timeline.</em>
         </h2>
         <p class="lead reveal stagger-3" style="max-width:560px; margin:0 auto; margin-top:16px;">
-          Every cycle is different. Yours might be 24 days or 36 days 
-          — and every phase has distinct health, nutrition, and energy patterns 
+          Every cycle is different. Yours might be 24 days or 36 days
+          — and every phase has distinct health, nutrition, and energy patterns
           that Rivora adapts to specifically for you.
         </p>
         <div class="cycle-length-callout reveal stagger-4" style="margin-top:24px;">
           <span class="range-tag">21 – 40+ days</span>
-          All cycle lengths supported · PCOS-aware · Irregular mode
+          All cycle lengths supported · PMOS-aware · Irregular mode
         </div>
       </div>
 
       <div class="phase-grid">
-        <div class="phase-card reveal-up stagger-1"
-             style="--phase-color: var(--phase-reset)">
+        <div class="phase-card reveal-up stagger-1" style="--phase-color: var(--phase-reset)">
           <div class="phase-number">Phase 1</div>
           <h3>Reset Week</h3>
           <div class="phase-range">Typically days 1–5 (varies)</div>
-          <p class="phase-desc">Your body renews. Rest, warmth, and comfort food are what you need. Cramps, fatigue, and lower mood are natural here.</p>
+          <p class="phase-desc">Your body renews. Rest, warmth, and comfort food are what you need. Cramps, fatigue, and
+            lower mood are natural here.</p>
           <div class="phase-nutrition">
             <div class="nutrition-label">Key Nutrition</div>
-            <div class="nutrition-text">Iron-rich: spinach, red meat, lentils · Magnesium: dark chocolate · Hydration: 2.5–3L</div>
+            <div class="nutrition-text">Iron-rich: dal makhani, kaleji, chana · Warming: adrak chai, khichdi ·
+              Hydration: 2.5–3L · Comfort: halwa or kheer in moderation</div>
           </div>
           <div class="phase-tags">
             <span class="phase-tag-item">Rest</span>
@@ -1485,15 +1898,16 @@
           </div>
         </div>
 
-        <div class="phase-card reveal-up stagger-2"
-             style="--phase-color: var(--phase-energy)">
+        <div class="phase-card reveal-up stagger-2" style="--phase-color: var(--phase-energy)">
           <div class="phase-number">Phase 2</div>
           <h3>Growing Energy</h3>
           <div class="phase-range">Typically days 6–13 (varies)</div>
-          <p class="phase-desc">Energy and mood climb day by day. You feel curious, social, and open to new things. The best week for plans and fresh starts.</p>
+          <p class="phase-desc">Energy and mood climb day by day. You feel curious, social, and open to new things. The
+            best week for plans and fresh starts.</p>
           <div class="phase-nutrition">
             <div class="nutrition-label">Key Nutrition</div>
-            <div class="nutrition-text">Vitamin B: eggs, whole grains · Zinc: pumpkin seeds · Lean protein for rising energy</div>
+            <div class="nutrition-text">Vitamin B: anda, dahi, brown rice · Zinc: kaddoo ke beej, matar · Lean protein:
+              chicken karahi, daal · Energy: whole wheat roti</div>
           </div>
           <div class="phase-tags">
             <span class="phase-tag-item">Adventurous</span>
@@ -1502,15 +1916,16 @@
           </div>
         </div>
 
-        <div class="phase-card reveal-up stagger-3"
-             style="--phase-color: var(--phase-peak)">
+        <div class="phase-card reveal-up stagger-3" style="--phase-color: var(--phase-peak)">
           <div class="phase-number">Phase 3</div>
           <h3>Peak Energy</h3>
           <div class="phase-range">Typically days 14–16 (varies)</div>
-          <p class="phase-desc">Your highest confidence and natural charisma. You feel magnetic and alive. Make this week count — your body is performing at its best.</p>
+          <p class="phase-desc">Your highest confidence and natural charisma. You feel magnetic and alive. Make this
+            week count — your body is performing at its best.</p>
           <div class="phase-nutrition">
             <div class="nutrition-label">Key Nutrition</div>
-            <div class="nutrition-text">Antioxidants: berries, leafy greens · Light, energising meals · Stay well hydrated</div>
+            <div class="nutrition-text">Antioxidants: anar, amla, palak · Light meals: dahi raita, grilled chicken ·
+              Stay well hydrated: lassi (no sugar) or nimbu pani</div>
           </div>
           <div class="phase-tags">
             <span class="phase-tag-item">Confident</span>
@@ -1519,15 +1934,16 @@
           </div>
         </div>
 
-        <div class="phase-card reveal-up stagger-4"
-             style="--phase-color: var(--phase-reflect)">
+        <div class="phase-card reveal-up stagger-4" style="--phase-color: var(--phase-reflect)">
           <div class="phase-number">Phase 4</div>
           <h3>Reflection Week</h3>
           <div class="phase-range">Typically days 17–28+ (varies)</div>
-          <p class="phase-desc">Energy turns inward. You may feel more sensitive, emotional, or irritable — this is your luteal phase, and it's completely normal.</p>
+          <p class="phase-desc">Energy turns inward. You may feel more sensitive, emotional, or irritable — this is your
+            luteal phase, and it's completely normal.</p>
           <div class="phase-nutrition">
             <div class="nutrition-label">Key Nutrition</div>
-            <div class="nutrition-text">Magnesium: nuts, dark chocolate, leafy greens · Complex carbs for stable mood · Reduce caffeine</div>
+            <div class="nutrition-text">Magnesium: badam, akhrot, methi · Complex carbs: dalia, brown rice, moong daal ·
+              Mood support: haldi doodh · Reduce chai & coffee</div>
           </div>
           <div class="phase-tags">
             <span class="phase-tag-item">Introspective</span>
@@ -1551,13 +1967,13 @@
             <em>It's a pattern.</em>
           </h2>
           <p class="lead reveal stagger-3" style="margin-top:24px; max-width:480px;">
-            Most women were never taught to read their own cycle. 
-            The mood shifts, the energy drops, the cravings — they're 
+            Most women were never taught to read their own cycle.
+            The mood shifts, the energy drops, the cravings — they're
             predictable once you understand your phases.
           </p>
           <p class="lead reveal stagger-4" style="margin-top:16px; max-width:480px;">
-            And most partners? They misread these signals as personal. 
-            It's not a relationship problem. It's a knowledge gap. 
+            And most partners? They misread these signals as personal.
+            It's not a relationship problem. It's a knowledge gap.
             Rivora closes it — for both of you.
           </p>
         </div>
@@ -1596,7 +2012,7 @@
           <em>Designed to help him.</em>
         </h2>
         <p class="lead on-dark reveal stagger-3" style="max-width:520px; margin:0 auto; margin-top:16px;">
-          She gets a complete health companion. He gets the context 
+          She gets a complete health companion. He gets the context
           to be a better partner. She controls everything he sees.
         </p>
       </div>
@@ -1607,7 +2023,7 @@
           <h3>Understand<br>your body.</h3>
           <ul class="dual-list">
             <li><span class="check-her">✓</span> Track your exact cycle length (21–40+ days)</li>
-            <li><span class="check-her">✓</span> PCOS & irregular cycle support</li>
+            <li><span class="check-her">✓</span> PMOS & irregular cycle support</li>
             <li><span class="check-her">✓</span> Phase-specific nutrition & supplements</li>
             <li><span class="check-her">✓</span> Nutrient deficiency detection</li>
             <li><span class="check-her">✓</span> Mood, energy, symptom logging</li>
@@ -1645,45 +2061,52 @@
 
       <div class="features-grid">
         <div class="feature-card reveal-up stagger-1"
-             style="--icon-bg: rgba(196,94,106,0.08); --icon-border: rgba(196,94,106,0.15)">
+          style="--icon-bg: rgba(196,94,106,0.08); --icon-border: rgba(196,94,106,0.15)">
           <div class="feature-icon">🔴</div>
           <h3>Your Cycle,<br>Your Length</h3>
-          <p>21 days or 40 days — Rivora adapts. Not a rigid 28-day assumption. Confidence indicators tell you when predictions are solid vs. approximate.</p>
+          <p>21 days or 40 days — Rivora adapts. Not a rigid 28-day assumption. Confidence indicators tell you when
+            predictions are solid vs. approximate.</p>
         </div>
 
         <div class="feature-card reveal-up stagger-2"
-             style="--icon-bg: rgba(74,124,106,0.08); --icon-border: rgba(74,124,106,0.15)">
+          style="--icon-bg: rgba(74,124,106,0.08); --icon-border: rgba(74,124,106,0.15)">
           <div class="feature-icon">🌿</div>
           <h3>Phase-Smart<br>Health Guidance</h3>
-          <p>Iron this week, magnesium next week. Hydration targets, supplement suggestions, and diet tips that actually change based on where you are in your cycle.</p>
+          <p>Iron this week, magnesium next week. Hydration targets, supplement suggestions, and diet tips that actually
+            change based on where you are in your cycle.</p>
         </div>
 
         <div class="feature-card reveal-up stagger-3"
-             style="--icon-bg: rgba(201,151,74,0.08); --icon-border: rgba(201,151,74,0.15)">
+          style="--icon-bg: rgba(201,151,74,0.08); --icon-border: rgba(201,151,74,0.15)">
           <div class="feature-icon">🧬</div>
-          <h3>PCOS & Irregular<br>Cycle Support</h3>
-          <p>Ovulation signal logging, BBT pattern tracking, and honest range-based predictions instead of false single-date precision. A nudge to consult a doctor when patterns suggest it.</p>
+          <h3>PMOS & Irregular<br>Cycle Support</h3>
+          <p>Ovulation signal logging, BBT pattern tracking, and honest range-based predictions instead of false
+            single-date precision. Fully updated for the new PMOS diagnosis framework. A nudge to consult a doctor when
+            patterns suggest it.</p>
         </div>
 
         <div class="feature-card reveal-up stagger-4"
-             style="--icon-bg: rgba(90,110,158,0.08); --icon-border: rgba(90,110,158,0.15)">
+          style="--icon-bg: rgba(90,110,158,0.08); --icon-border: rgba(90,110,158,0.15)">
           <div class="feature-icon">🔒</div>
           <h3>Privacy First,<br>Always</h3>
-          <p>Biometric lock, PIN fallback, and notifications that show nothing sensitive on the lock screen. Built for shared family phones in South Asian households.</p>
+          <p>Biometric lock, PIN fallback, and notifications that show nothing sensitive on the lock screen. Built for
+            shared family phones in South Asian households.</p>
         </div>
 
         <div class="feature-card reveal-up stagger-5"
-             style="--icon-bg: rgba(212,114,106,0.08); --icon-border: rgba(212,114,106,0.15)">
+          style="--icon-bg: rgba(212,114,106,0.08); --icon-border: rgba(212,114,106,0.15)">
           <div class="feature-icon">💑</div>
           <h3>Partner<br>Connection</h3>
-          <p>Invite your partner with a secure, expiring link. Set exactly what he sees. Revoke access instantly. A separate experience — not just a shared login.</p>
+          <p>Invite your partner with a secure, expiring link. Set exactly what he sees. Revoke access instantly. A
+            separate experience — not just a shared login.</p>
         </div>
 
         <div class="feature-card reveal-up stagger-6"
-             style="--icon-bg: rgba(196,94,106,0.08); --icon-border: rgba(196,94,106,0.15)">
+          style="--icon-bg: rgba(196,94,106,0.08); --icon-border: rgba(196,94,106,0.15)">
           <div class="feature-icon">📊</div>
           <h3>Health Reports<br>for Your Doctor</h3>
-          <p>After 3–6 months of logging, generate a clean summary of your cycle patterns, symptoms, and trends to share with your gynaecologist.</p>
+          <p>After 3–6 months of logging, generate a clean summary of your cycle patterns, symptoms, and trends to share
+            with your gynaecologist.</p>
         </div>
       </div>
     </div>
@@ -1698,8 +2121,8 @@
         <em>For here.</em>
       </h2>
       <p class="lead reveal stagger-3" style="max-width:520px; margin:16px auto 0;">
-        We understand shared devices, family privacy, and why health 
-        conversations are complicated here. Rivora was designed with all 
+        We understand shared devices, family privacy, and why health
+        conversations are complicated here. Rivora was designed with all
         of that — from day one.
       </p>
 
@@ -1722,7 +2145,7 @@
         </div>
         <div class="trust-pill reveal stagger-5">
           <span class="pill-dot" style="--dot-color: var(--brand-primary)"></span>
-          Pakistan &amp; India · PDPB &amp; DPDP compliant
+          South Asia · PDPB &amp; DPDP compliant
         </div>
       </div>
     </div>
@@ -1732,7 +2155,8 @@
   <section id="waitlist" aria-label="Join the Rivora waitlist">
     <div class="waitlist-bg-glow" aria-hidden="true"></div>
     <div class="waitlist-inner">
-      <div class="hero-badge reveal" style="background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.25); color:white;">
+      <div class="hero-badge reveal"
+        style="background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.25); color:white;">
         <span class="badge-pulse" style="background:white;" aria-hidden="true"></span>
         Launching Soon · Android
       </div>
@@ -1743,15 +2167,13 @@
       </h2>
 
       <p class="waitlist-sub reveal stagger-3">
-        Rivora is launching soon on Android. Join thousands of women 
-        across Pakistan and India who are already waiting to finally 
+        Rivora is launching soon on Android. Join thousands of women
+        across South Asia who are already waiting to finally
         understand their bodies.
       </p>
 
-      <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8"
-         target="_blank" rel="noopener"
-         class="btn-waitlist reveal stagger-4"
-         aria-label="Join Rivora waitlist on Google Forms">
+      <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8" target="_blank" rel="noopener" class="btn-waitlist reveal stagger-4"
+        aria-label="Join Rivora waitlist on Google Forms">
         Join the Waitlist →
       </a>
 
@@ -1768,14 +2190,14 @@
       </div>
 
       <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
         <a href="https://forms.gle/pjGBnTUd3Xd73Sjw8" target="_blank" rel="noopener">Join Waitlist</a>
       </div>
 
       <p class="disclaimer">
-        Rivora provides general wellness information and is not a medical device or healthcare provider. 
-        For diagnosis or treatment, consult a qualified clinician. 
+        Rivora provides general wellness information and is not a medical device or healthcare provider.
+        For diagnosis or treatment, consult a qualified clinician.
         App is for users aged 18+.
       </p>
 
@@ -1833,4 +2255,5 @@
     });
   </script>
 </body>
+
 </html>
